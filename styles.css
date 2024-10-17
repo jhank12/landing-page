@@ -1,0 +1,627 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --blue: rgb(83, 104, 223);
+  --red: hsl(0, 94%, 66%);
+
+  --blue-nav: rgba(37, 43, 70, .95);
+
+  --grayish-blue: hsl(229, 8%, 60%);
+  --dark-blue: #252b46;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  height: 100vh;
+}
+
+.siteContainer {
+  width: 100%;
+}
+
+.contentContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 95%;
+}
+
+.sectionContainer {
+  padding: 5rem 0;
+}
+
+.flex-col {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.landingSection {
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  height: 100vh;
+}
+
+header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.hamburger {
+    display: none;
+}
+
+.mobileNav {
+    background-color: var(--blue-nav);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    height: 100vh;
+    width: 100vw;
+    padding: 2rem;
+}
+
+.mobileNavHead {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mobileNav nav ul {
+    flex-direction: column;
+    font-size: 1.75rem;
+    font-weight: 300;
+    gap: 0;
+    margin-top: 2rem;
+}
+
+.mobileNav nav ul li {
+    border-bottom: 1px solid hsl(222, 17%, 34%);
+    text-align: center;
+    padding: 1.25rem 0;
+    width: 100%;
+}
+
+
+
+.mobileNav nav ul li a  {
+    color: white;
+}
+
+nav ul {
+  align-items: center;
+  display: flex;
+  gap: 3rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+li {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+
+a {
+  color: var(--dark-blue);
+  text-decoration: none;
+}
+
+li a:hover {
+    color: var(--red) !important;
+
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 500;
+  font-size: 0.8rem;
+  height: 45px;
+}
+
+.landingContent {
+  align-items: center;
+  display: flex;
+  position: relative;
+  z-index: 4;   
+  padding-bottom: 15rem;
+}
+
+.landingContent > * {
+  flex: 1;
+}
+
+.landingText {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.landingText p {
+  color: var(--grayish-blue);
+  width: 35%;
+  line-height: 1.6;
+}
+
+.landingBtnsContainer {
+    display: flex;
+    gap: .9rem;
+}
+
+.landingContent svg {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  margin-right: -100px;
+  scale: .9
+
+}
+
+.landingContent button {
+  width: 140px;
+}
+
+.btnMain:hover, .btnSecondary:hover, .btnRed:hover {
+    border: 2px solid;
+}
+
+.btnMain {
+  background-color: var(--blue);
+}
+
+.btnMain:hover {
+    background-color: transparent;
+    border-color: var(--blue);
+    color: var(--blue);
+}
+
+.btnSecondary {
+  background-color: rgb(245, 245, 245);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+  color: rgb(111, 111, 111);
+}
+
+.btnSecondary:hover {
+    background-color: transparent;    
+    border-color: rgb(111, 111, 111);
+}
+
+.btnRed {
+    background-color: var(--red);
+    height: 40px;
+    width: 110px;
+}
+
+.btnRed:hover {
+    background-color: white;
+    border-color: var(--red);
+    color: var(--red);
+}
+
+.sectionDescription {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    text-align: center;
+}
+
+.sectionDescription h2 {
+    color: var(--dark-blue);
+    font-weight: 500;
+}
+
+.sectionDescription p {
+    color: var(--grayish-blue);
+    width: 52%;
+}
+
+.tabsContainer {
+    margin-bottom: 1rem;
+    border: 1px red;
+    width: 60%;
+
+}
+
+.tabsContainer ul {
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.tabsContainer li {
+    border-bottom: 1px solid rgb(229, 229, 229);
+    color: var(--grayish-blue);
+    cursor: pointer;
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+    flex: 1;
+}
+
+.tabsContainer li:hover {
+    color: var(--red);
+}
+
+.tabActive {
+    border-bottom: 2px solid var(--red) !important;
+    color: var(--dark-blue) !important;
+    
+}
+
+.tabContent {
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.tabContent svg {
+    flex: 1;
+}
+
+.tabContent h2 {
+    font-weight: 500;
+}
+
+.tabContent .landingText {
+    flex: 1;
+}
+
+.tabContent .landingText p {
+    width: 100%;
+}
+
+.tabContent button {
+    width: 105px;
+}
+
+.browserCardsContainer {
+    display: flex;
+    gap: 1.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.browserCard {
+    align-items: center;
+    box-shadow: 0 2px 15px rgba(83, 104, 223, .20);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.25rem;
+    height: 327px;
+    width: 250px
+}
+
+.browserCard:nth-of-type(2) {
+    margin-top: 3rem;
+}
+
+.browserCard:nth-of-type(3) {
+    margin-top: 6rem;
+}
+
+.browserCardTop {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    padding: 1.5rem;
+
+    border-bottom: 4px dotted rgb(234, 234, 234);
+    width: 100%;
+}
+
+.browserName {
+    color: var(--dark-blue);
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-top: 1.25rem;
+}
+
+.browserVersion {
+    color: var(--grayish-blue);
+    font-size: .85rem;
+    font-weight: 400;
+
+}
+
+.browserCard button {
+    margin-top: 1.25rem;
+    width: 100%;
+}
+
+.browserCard hr {
+    color: rgb(216, 216, 216);
+    border-top: 4px dotted;
+
+}
+
+.bookmarksContainer {
+    width: 50%;
+}
+
+.bookmarkDropdown {
+    border-bottom: 1px solid var(--dark-blue);
+    
+}
+
+.bookmarkDropdownOpen svg {
+    color: var(--red) !important;
+
+    transform: rotateZ(-180deg) !important;
+
+}
+
+
+.bookmarkDropdown:nth-of-type(1) {
+    border: 1px solid var(--dark-blue);
+    border-left: none;
+    border-right: none;
+}
+
+.bookmarkHeader {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+}
+
+.bookmarkHeader p {
+    color: var(--dark-blue);
+    cursor: pointer;
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+.bookmarkHeader:hover {
+    cursor: pointer;
+
+}
+
+.bookmarkHeader:hover > * {
+    color: var(--red) !important;
+}
+
+.bookmarkHeader p:hover {
+}
+
+.bookmarkAnswer {
+    color: rgb(96, 98, 118);
+    line-height: 2.3;
+    font-size: .95rem;
+    padding: .25rem 0 1rem 0;  
+}
+
+.bookmarksBtn {
+    width: 100px;
+}
+
+.emailSection {
+    background-color: var(--blue);
+    color: white;
+    text-align: center;
+    padding: 3.5rem;
+    align-items: center;
+}
+
+.emailSection p:nth-of-type(1) {
+    font-size: .85rem;
+    font-weight: 300;
+    letter-spacing: 2.5px;
+
+}
+
+.emailSection p:nth-of-type(2) {
+    font-size: 1.85rem;
+}
+
+.emailInputContainer {
+    align-self: center;
+    display: flex;
+    gap: 1rem;
+}
+
+.emailInputContainer input {
+    border: none;
+    border-radius: 3px;
+    color: rgb(206, 206, 206);
+    font: inherit;
+    font-size: .9rem;
+    height: 40px;
+    padding-left: 1rem;
+    width: 200px;
+}
+
+.emailInputContainer input::placeholder {
+    color: rgb(206, 206, 206);
+
+}
+
+footer {
+    background-color: var(--dark-blue);
+    padding: 1.5rem 0;
+}
+
+.footerContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1150px;
+    margin: 0 auto;
+    width: 85%;
+}
+
+.footerContent nav {
+    align-items: center;
+    display: flex;
+    gap: 3rem;
+}
+
+.footerContent ul {
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+}
+
+.footerContent li a {
+    color: white;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: .8rem;
+    letter-spacing: 1px;
+}
+
+.socialLinks {
+    align-items: center;
+    cursor: pointer;
+
+    display: flex;
+    gap: 2rem;
+}
+
+.socialLinks svg path:hover {
+    color: var(--red);
+}
+
+@media (max-width: 800px) {
+
+    html {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    .contentContainer {
+        padding: 0 2rem;
+    }
+
+    .regularNav {
+        display: none;
+    }
+
+    .hamburger {
+        display: inline-block;
+    }
+
+    .landingContent {
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    .landingContent svg {
+        position: relative;
+    }
+
+    .landingContent svg, .landingContent svg > * {
+        scale: .5;
+        width: 100%;
+    }
+
+    .landingText {
+        align-items: center;
+        text-align: center;
+    }
+
+    .landingText p {
+        width: 100%;
+    }
+
+    .sectionDescription {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1.1rem;
+        text-align: center;
+    }
+    
+    .sectionDescription h2 {
+        color: var(--dark-blue);
+        font-weight: 500;
+    }
+    
+    .sectionDescription p {
+        color: var(--grayish-blue);
+        width: 100%;
+    }
+
+    .tabsContainer ul {
+        align-items: normal;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .tabContent {
+        align-items: normal;
+        flex-direction: column;
+    }
+
+    .tabContent svg, .tabContent svg > * {
+        width: 100%;
+    }
+
+    .bookmarksContainer {
+        width: 100%;
+    }
+
+    .browserCard {
+    }
+
+    .emailInputContainer {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .emailInputContainer input, .emailInputContainer button {
+        width: 100%;
+    }
+
+    .footerContent {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footerContent nav {
+        flex-direction: column;
+        gap: 2rem;
+
+    }
+
+    .footerContent nav ul {
+        flex-direction: column;
+    }
+}
